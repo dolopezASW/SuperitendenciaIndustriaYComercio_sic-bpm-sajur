@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_B730D7C1-7F56-4FF9-8DCE-4D17942B6B1E" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_F9EB33BC-5348-4A0F-B2CB-FA415618EA64" name="AutoRule" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_B730D7C1-7F56-4FF9-8DCE-4D17942B6B1E">
+  <dmn:extensionElements/>
+  <dmn:decision id="_DCA8CBF1-8835-47B7-A5A4-0067D429B857" name="DS_Define_Path">
+    <dmn:extensionElements/>
+    <dmn:variable id="_5DCBE6BF-2BCF-4631-9D3C-7DFBCDD217BD" name="DS_Define_Path" typeRef="string"/>
+    <dmn:informationRequirement id="_360BCD9D-5F6E-4AE8-A4CB-22FA137850BD">
+      <dmn:requiredInput href="#_14B932D5-1914-40FD-958B-FEE35D1A4563"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_3D5BC6DC-AC05-445B-9320-BFAD207D99A2" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_3B000362-9EC6-443F-A77A-D985E04CA7AC">
+        <dmn:inputExpression id="_F1FB7706-C879-4AD3-BB76-B9DDF14C7C98" typeRef="string">
+          <dmn:text>Auto</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_47DBB577-8728-41CC-BAF4-08B152CB252E"/>
+      <dmn:annotation name="Descripción"/>
+      <dmn:rule id="_2EFF4C44-3F9A-419D-A18A-87EFC4601DEA">
+        <dmn:inputEntry id="_2590BC54-CF2A-4430-95D3-1708C9F41C18">
+          <dmn:text>"Retiro Demanda"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_3CA5F2B0-7FCB-4B55-92F1-4D7F3C0BE70B">
+          <dmn:text>"RETIRO"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>Este auto es para el retiro de demanda</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_CEA8A832-4127-4FE6-BC2B-442D8514A400">
+        <dmn:inputEntry id="_40678358-31A4-4888-AB8B-DDC9E7DAF574">
+          <dmn:text>"Traslado"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_1ADEAA95-FA22-4588-BAC8-E612DA067E28">
+          <dmn:text>"TRASLADO"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>Este es un auto de traslado por no competencia</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_39C675E4-971D-4517-8DB8-B3C377041159">
+        <dmn:inputEntry id="_6E92D339-8190-418A-9A3F-D48523EDE057">
+          <dmn:text>"Auto de Calificación"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_6D4BFD73-2F26-42C8-807B-BCDBB4378707">
+          <dmn:text>"GYNA"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>Este documento corresponde a un auto de calificación</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:inputData id="_14B932D5-1914-40FD-958B-FEE35D1A4563" name="Auto">
+    <dmn:extensionElements/>
+    <dmn:variable id="_38C093FB-6D76-46F6-8D01-2FC01A22BF49" name="Auto" typeRef="string"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_3D5BC6DC-AC05-445B-9320-BFAD207D99A2">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>167.0</kie:width>
+            <kie:width>546.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-_DCA8CBF1-8835-47B7-A5A4-0067D429B857" dmnElementRef="_DCA8CBF1-8835-47B7-A5A4-0067D429B857" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="406" y="83" width="125" height="51"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_14B932D5-1914-40FD-958B-FEE35D1A4563" dmnElementRef="_14B932D5-1914-40FD-958B-FEE35D1A4563" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="223" y="83" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_360BCD9D-5F6E-4AE8-A4CB-22FA137850BD" dmnElementRef="_360BCD9D-5F6E-4AE8-A4CB-22FA137850BD">
+        <di:waypoint x="273" y="108"/>
+        <di:waypoint x="468.5" y="83"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
